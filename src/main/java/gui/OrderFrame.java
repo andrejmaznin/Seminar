@@ -22,10 +22,9 @@ public class OrderFrame extends JDialog {
     private boolean confirmed = false;
 
     public OrderFrame(JFrame parent, Engine engine) {
-        super(parent, "Заказ похлебки", true);
+        super(parent, "Заказ рагу", true);
         this.engine = engine;
         this.setContentPane(contentPane);
-        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.pack();
         this.setLocationRelativeTo(parent);
 
@@ -49,12 +48,7 @@ public class OrderFrame extends JDialog {
     private void updateEngineAndPreview() {
         engine.resetCurrentOrder();
         List<JCheckBox> boxes = List.of(checkBox1, checkBox2, checkBox3, checkBox4);
-        List<Class<? extends Addition>> additionClasses = List.of(
-                DoubleDeerMeat.class,
-                FireSauce.class,
-                NordBread.class,
-                SnowBerries.class
-        );
+        List<Class<? extends Addition>> additionClasses = List.of(DoubleDeerMeat.class, FireSauce.class, NordBread.class, SnowBerries.class);
 
         int selectedCount = 0;
         for (int i = 0; i < boxes.size(); i++) {
@@ -63,7 +57,7 @@ public class OrderFrame extends JDialog {
             }
         }
         boolean limitReached = selectedCount >= 3;
-        
+
         int appliedCount = 0;
         for (int i = 0; i < boxes.size(); i++) {
             JCheckBox cb = boxes.get(i);
