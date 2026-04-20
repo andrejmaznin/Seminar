@@ -13,10 +13,10 @@ public class NordBread extends Addition {
 
     @Override
     public float checkout() {
-        return stew.checkout() + this.price;
+        return super.checkout() + this.price;
     }
 
     public String toString() {
-        return stew.toString() + ", Нордская лепешка";
+        return super.toString() + ", Нордская лепешка";
     }
 }

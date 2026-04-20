@@ -13,10 +13,11 @@ public class DoubleDeerMeat extends Addition {
 
     @Override
     public float checkout() {
-        return stew.checkout() + this.price;
+        return super.checkout() + this.price;
     }
 
+    @Override
     public String toString() {
-        return stew.toString() + ", Двойная порция оленины";
+        return super.toString () + ", Двойная порция оленины";
     }
 }

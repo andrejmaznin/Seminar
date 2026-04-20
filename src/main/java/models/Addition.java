@@ -1,11 +1,20 @@
 package models;
 
 public abstract class Addition implements IStew {
-    protected IStew stew;
-
+    private IStew stew;
 
     public Addition(IStew stew) {
         this.stew = stew;
+    }
+
+    @Override
+    public String toString() {
+        return stew.toString();
+    }
+
+    @Override
+    public float checkout() {
+        return stew.checkout();
     }
 
     public IStew getStew() {

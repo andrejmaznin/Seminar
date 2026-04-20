@@ -13,11 +13,12 @@ public class FireSauce extends Addition {
 
     @Override
     public float checkout() {
-        return stew.checkout() + this.price;
+        return super.checkout() + this.price;
     }
 
+
+    @Override
     public String toString() {
-        return stew.toString() + ", Огненный соус";
+        return super.toString() + ", Огненный соус";
     }
-
 }

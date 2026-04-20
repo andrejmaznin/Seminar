@@ -14,10 +14,10 @@ public class SnowBerries extends Addition {
 
     @Override
     public float checkout() {
-        return stew.checkout() + this.price;
+        return super.checkout() + this.price;
     }
 
     public String toString() {
-        return stew.toString() + ", Снежные ягоды";
+        return super.toString() + ", Снежные ягоды";
     }
 }
