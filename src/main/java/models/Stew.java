@@ -3,6 +3,7 @@ package models;
 public class Stew implements IStew {
     private float price = 50;
 
+    @Override
     public float checkout() {
         return this.price;
     }
@@ -15,6 +16,7 @@ public class Stew implements IStew {
         this.price = price;
     }
 
+    @Override
     public String toString() {
         return "Рагу";
     }
